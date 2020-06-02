@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "fA1zT0DaayRDJAR4aboKqAuSpM/zw1z+lW8L/flfqcTeHwkxqjZeGfJr2DHfklD/FUjVa2LkiUY76vE1AZOoKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\ToDoList_WF\\ToDoList_WF\\ToDoList_WF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\closedxml\\0.95.2\\closedxml.0.95.2.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512"
+  ],
+  "logs": []
+}
