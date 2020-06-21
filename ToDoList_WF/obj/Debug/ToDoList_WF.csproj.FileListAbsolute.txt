@@ -29,3 +29,7 @@ C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\K4os.Hash.xxHash.d
 C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\System.Memory.dll
 C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\MySql.Data.xml
+C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\ToDoList_WF.exe.manifest
+C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\bin\Debug\ToDoList_WF.application
+C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\obj\Debug\ToDoList_WF.exe.manifest
+C:\Users\ADMIN\source\repos\ToDoList_WF\ToDoList_WF\obj\Debug\ToDoList_WF.application

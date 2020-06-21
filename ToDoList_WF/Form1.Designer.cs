@@ -31,9 +31,9 @@ namespace ToDoList_WF
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.lbTitleName = new System.Windows.Forms.Label();
 			this.btnNewTask = new System.Windows.Forms.Button();
 			this.btnDoneTask = new System.Windows.Forms.Button();
@@ -41,8 +41,6 @@ namespace ToDoList_WF
 			this.btnSaveList = new System.Windows.Forms.Button();
 			this.btnLoadList = new System.Windows.Forms.Button();
 			this.dgvTaskList = new System.Windows.Forms.DataGridView();
-			this.btnUndoneTask = new System.Windows.Forms.Button();
-			this.btnEditTask = new System.Windows.Forms.Button();
 			this.colSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +51,8 @@ namespace ToDoList_WF
 			this.colAlarmTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colTags = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colDone = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.btnUndoneTask = new System.Windows.Forms.Button();
+			this.btnEditTask = new System.Windows.Forms.Button();
 			this.txtSearch = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
 			this.SuspendLayout();
@@ -150,30 +150,6 @@ namespace ToDoList_WF
 			this.dgvTaskList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaskList_CellClick);
 			this.dgvTaskList.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaskList_CellValueChanged);
 			// 
-			// btnUndoneTask
-			// 
-			this.btnUndoneTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnUndoneTask.Location = new System.Drawing.Point(1059, 8);
-			this.btnUndoneTask.Name = "btnUndoneTask";
-			this.btnUndoneTask.Size = new System.Drawing.Size(101, 33);
-			this.btnUndoneTask.TabIndex = 11;
-			this.btnUndoneTask.Text = "Undone";
-			this.btnUndoneTask.UseVisualStyleBackColor = true;
-			this.btnUndoneTask.Click += new System.EventHandler(this.btnUndoneTask_Click);
-			// 
-			// btnEditTask
-			// 
-			this.btnEditTask.AutoSize = true;
-			this.btnEditTask.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditTask.BackgroundImage")));
-			this.btnEditTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnEditTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEditTask.Location = new System.Drawing.Point(1114, 83);
-			this.btnEditTask.Name = "btnEditTask";
-			this.btnEditTask.Size = new System.Drawing.Size(46, 46);
-			this.btnEditTask.TabIndex = 16;
-			this.btnEditTask.UseVisualStyleBackColor = true;
-			this.btnEditTask.Click += new System.EventHandler(this.btnEditTask_Click);
-			// 
 			// colSelected
 			// 
 			this.colSelected.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -215,8 +191,8 @@ namespace ToDoList_WF
 			// colCreatedDate
 			// 
 			this.colCreatedDate.DataPropertyName = "CreatedDate";
-			dataGridViewCellStyle10.Format = "dd/MM/yyyy";
-			this.colCreatedDate.DefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+			this.colCreatedDate.DefaultCellStyle = dataGridViewCellStyle1;
 			this.colCreatedDate.HeaderText = "Created Date";
 			this.colCreatedDate.MinimumWidth = 6;
 			this.colCreatedDate.Name = "colCreatedDate";
@@ -235,8 +211,8 @@ namespace ToDoList_WF
 			// colAlarmDate
 			// 
 			this.colAlarmDate.DataPropertyName = "AlarmDate";
-			dataGridViewCellStyle11.Format = "dd/MM/yyyy";
-			this.colAlarmDate.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+			this.colAlarmDate.DefaultCellStyle = dataGridViewCellStyle2;
 			this.colAlarmDate.HeaderText = "Alarm Date";
 			this.colAlarmDate.MinimumWidth = 6;
 			this.colAlarmDate.Name = "colAlarmDate";
@@ -246,8 +222,8 @@ namespace ToDoList_WF
 			// colAlarmTime
 			// 
 			this.colAlarmTime.DataPropertyName = "AlarmTime";
-			dataGridViewCellStyle12.Format = "HH:mm:ss";
-			this.colAlarmTime.DefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle3.Format = "HH:mm:ss";
+			this.colAlarmTime.DefaultCellStyle = dataGridViewCellStyle3;
 			this.colAlarmTime.HeaderText = "Alarm Time";
 			this.colAlarmTime.MinimumWidth = 6;
 			this.colAlarmTime.Name = "colAlarmTime";
@@ -273,14 +249,43 @@ namespace ToDoList_WF
 			this.colDone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			this.colDone.Width = 50;
 			// 
+			// btnUndoneTask
+			// 
+			this.btnUndoneTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUndoneTask.Location = new System.Drawing.Point(1059, 8);
+			this.btnUndoneTask.Name = "btnUndoneTask";
+			this.btnUndoneTask.Size = new System.Drawing.Size(101, 33);
+			this.btnUndoneTask.TabIndex = 11;
+			this.btnUndoneTask.Text = "Undone";
+			this.btnUndoneTask.UseVisualStyleBackColor = true;
+			this.btnUndoneTask.Click += new System.EventHandler(this.btnUndoneTask_Click);
+			// 
+			// btnEditTask
+			// 
+			this.btnEditTask.AutoSize = true;
+			this.btnEditTask.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditTask.BackgroundImage")));
+			this.btnEditTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnEditTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditTask.Location = new System.Drawing.Point(1114, 83);
+			this.btnEditTask.Name = "btnEditTask";
+			this.btnEditTask.Size = new System.Drawing.Size(46, 46);
+			this.btnEditTask.TabIndex = 16;
+			this.btnEditTask.UseVisualStyleBackColor = true;
+			this.btnEditTask.Click += new System.EventHandler(this.btnEditTask_Click);
+			// 
 			// txtSearch
 			// 
+			this.txtSearch.AccessibleDescription = "Search by tags";
 			this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtSearch.ForeColor = System.Drawing.SystemColors.InactiveCaption;
 			this.txtSearch.Location = new System.Drawing.Point(12, 97);
 			this.txtSearch.Name = "txtSearch";
 			this.txtSearch.Size = new System.Drawing.Size(208, 32);
 			this.txtSearch.TabIndex = 17;
+			this.txtSearch.Text = "Search by tag";
 			this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+			this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+			this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
 			// 
 			// Form1
 			// 

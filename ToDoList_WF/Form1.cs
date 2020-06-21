@@ -346,12 +346,37 @@ namespace ToDoList_WF
 
 		private void txtSearch_TextChanged(object sender, EventArgs e)
 		{
+			
 			conn.Open();
 			adapter = new MySqlDataAdapter($"SELECT * FROM `tasklist` where Tags like '%{txtSearch.Text}%'", conn);
 			dt = new DataTable();
 			adapter.Fill(dt);
 			dgvTaskList.DataSource = dt;
 			conn.Close();
+		}
+
+		private void txtSearch_Enter(object sender, EventArgs e)
+		{
+			if (txtSearch.Text == "Search by tag")
+			{
+				txtSearch.Text = "";
+				txtSearch.ForeColor = Color.Black;
+			}
+		}
+
+		private void txtSearch_Leave(object sender, EventArgs e)
+		{
+			if (txtSearch.Text == "")
+			{
+				txtSearch.Text = "Search by tag";
+				txtSearch.ForeColor = Color.Silver;
+				conn.Open();
+				adapter = new MySqlDataAdapter($"SELECT * FROM `tasklist`", conn);
+				dt = new DataTable();
+				adapter.Fill(dt);
+				dgvTaskList.DataSource = dt;
+				conn.Close();
+			}
 		}
 	}
 }
